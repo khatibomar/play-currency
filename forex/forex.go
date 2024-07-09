@@ -1,4 +1,4 @@
-package currency
+package forex
 
 type Currency interface {
 	Code() string

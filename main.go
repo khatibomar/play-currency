@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/khatibomar/play-currency/currency"
+	"github.com/khatibomar/play-currency/forex"
 )
 
 type USD struct{}
@@ -21,9 +21,9 @@ func (u USD) Ratio() float64 {
 }
 
 func main() {
-	a := currency.NewAmount[USD](100)
+	a := forex.NewAmount[USD](100)
 	fmt.Println(a)
-	b := currency.NewAmount[USD](200)
+	b := forex.NewAmount[USD](200)
 	a.Add(b)
 	fmt.Println(a)
 }
