@@ -35,11 +35,11 @@ func (u GBP) Ratio() float64 {
 }
 
 func main() {
-	a := forex.NewAmount[USD](100)
+	a := forex.NewAmount(100, USD{})
 	fmt.Println(a)
-	b := forex.NewAmount[USD](200)
+	b := forex.NewAmount(200, USD{})
 	a.Add(b)
 	fmt.Println(a)
 	// this will fail because different currencies, uncomment and see error
-	// a.Add(forex.NewAmount[GBP](50))
+	// a.Add(forex.NewAmount[GBP](50, GBP{}))
 }
